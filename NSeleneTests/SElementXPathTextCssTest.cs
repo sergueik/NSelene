@@ -5,12 +5,9 @@ using static NSelene.Selene;
 namespace NSeleneTests
 {
     [TestFixture]
-    public class SElementXPathTextCssTest : BaseTest
-    {
+    public class SElementXPathTextCssTest : BaseTest{
         [Test]
-        public void SElementAlternativeCssSearch()
-        {
-
+        public void SElementAlternativeCssSearch() {
             Given.OpenedPageWithBody("<h1 name='hello'>Hello Babe!</h1>");
             S("css = h1[name='hello']").Should(Have.Attribute("name", "hello"));
             S("h1:nth-of-type(1)").Should(Have.Text("Hello"));
